@@ -1,0 +1,136 @@
+<nav>
+  <header class="">
+    <div class="page-header">
+      <div class="logo">
+        <a href="#">Logo.</a>
+      </div>
+      <div class="nav-item">
+        <ul class="nav-link">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="toggle" data-bs-target="#offcanvasExample" data-bs-toggle="offcanvas">
+        <i style="font-size: 25px;color: #fff;" class="bi bi-list"></i>
+      </div>
+    </div>
+  </header>
+</nav>
+<!-- -------------------------sidebar------------------------- -->
+<div class="sidebar">
+
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div>
+        Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists,
+        etc.
+      </div>
+    </div>
+  </div>
+</div>
+<!-- -------------------------sidebar------------------------- -->
+
+<section class="heading-content" style="display: flex;padding: 0 100px;background-color: #1F252E;">
+  <div style="display: flex;align-items: center;justify-content: center;padding-top: 35px;">
+    <div class="resp-hexagon resp-hexagon">
+      <img src="assets/images/profile.png" alt="Your Image">
+    </div>
+  </div>
+  <div class="left-content main" style="width: 50%;padding:100px 8px;">
+    <div class="detail">
+      <h3>Hi, I'm</h3>
+      <h1><span style="color:#f9532d;">John &nbsp;</span>Doe</h1>
+      <p>I'm a professional Web Developer. Our Main Goal to help & Satisficed the Local & Global Clients by web
+        development solutions</p>
+      <button><a href="#about">About Us <i class="bi bi-arrow-left"></i></a></button>
+    </div>
+
+    <div class="social-icons">
+      <li *ngFor="let icon of icons"><i class="{{icon.name}}" [style.color]="icon.color"></i></li>
+    </div>
+  </div>
+
+  <div class="right-content" style="width: 50%;display: flex;justify-content: center;padding-top: 100px;">
+    <div class="hexagon">
+      <img src="assets/images/profile.png" alt="Your Image"
+        style="width: 100%;background-color: #A3CFCD;border-radius: 50%;">
+    </div>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <div class="about-content">
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="personal-info">
+          <div class="info-img-container">
+            <div class="img-container">
+              <img src="assets/images/profile.png" alt="">
+            </div>
+          </div>
+          <h4 class="name">John Doe</h4>
+          <div class="skill-btn">
+            <button>Ui/Ux Designer</button>
+          </div>
+          <div class="about-social-icons">
+            <li *ngFor="let icon of icons"><i class="{{icon.name}}" [style.color]="icon.color"></i></li>
+          </div>
+          <div class="personal-contact-info">
+            <div *ngFor="let info of contact" class="main-div">
+              <div class="info-item">
+                <i class="{{info.icon}}"></i>
+              </div>
+              <div class="item">
+                <span>{{info.phone}}</span>
+                <p>{{info.number}}</p>
+              </div>
+            </div>
+          </div>
+          <div class="download_cv mt-4">
+            <button><i class="bi bi-download"></i> Download Cv</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-9">
+        <div class="content-page">
+          <span class="page-title">About</span>
+          <br><br>
+          <p>I'm a frontend developer from Hyderabad, India, skilled in creating visually appealing and functional
+            websites that provide exceptional user experiences.
+          </p>
+          <p>
+            My aim is to bring across your message and identity in the most creative way. I created web design for many
+            famous brand companies.
+          </p>
+          <div class="section-wrapper">
+            <h2>What I Do!</h2>
+            <br>
+            <div class="row">
+              <div *ngFor="let work of experiance" class="col-xxl-6 col-xl-6 col-lg-6">
+                <div class="work-container">
+                  <div>
+                    <img class="workImg" src="{{work.img}}" alt="">
+                  </div>
+                  <div class="text">
+                    <h2 class="title">
+                      {{work.name}}
+                    </h2>
+                    <p>{{work.description}}</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
