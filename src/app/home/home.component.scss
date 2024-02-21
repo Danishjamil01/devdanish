@@ -118,7 +118,7 @@ header {
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: var(--font-md);
   font-weight: 800;
 }
 
@@ -162,10 +162,19 @@ p {
 .main button {
   background-color: transparent;
   border: 2px solid var(--primary-color);
-  padding: 10px 25px;
+  padding: 6px 25px;
   font-size: var(--font-sm);
-  border-radius: 25px;
+  border-radius: 0 27px 0 27px;
   cursor: pointer;
+  transition: .5s;
+}
+.main button:hover{
+  background-color: var(--primary-color);
+  border-radius: 25px;
+  transition: .5s;
+  a{
+  color: #fff;
+  }
 }
 
 a {
@@ -219,7 +228,7 @@ a {
       text-align: center;
       color: #fff;
       margin-top: 15px;
-      font-size: 24px;
+      font-size: var(--font-sm);
       font-family: serif;
     }
 
@@ -232,7 +241,7 @@ a {
         border-radius: 6px;
         background: #1d1d1d;
         color: #a6a6a6;
-        font-size: 15px;
+        font-size: var(--font-sm);
         font-weight: 500;
         margin-bottom: 6px;
       }
@@ -258,7 +267,7 @@ a {
 
           i {
             color: #E93B81;
-            font-size: 18px;
+            font-size: var(--font-sm);
             padding: 0;
             margin: 0;
           }
@@ -267,14 +276,14 @@ a {
         .item {
           span {
             display: block;
-            font-size: 12px;
+            font-size: var(--font-sm);
             text-transform: capitalize;
             font-weight: 400;
             color: #adacac;
           }
 
           p {
-            font-size: 13px;
+            font-size: var(--font-xs);
             font-weight: 400;
             color: #fff;
             text-transform: capitalize;
@@ -290,7 +299,7 @@ a {
         border: none;
         padding: 12px 40px;
         border-radius: 10px;
-        background-color: #1b74e4;
+        background-color: var(--primary-color);
         color: #fff;
         font-weight: 500;
       }
@@ -305,13 +314,13 @@ a {
     p {
       font-family: Poppins, sans-serif;
       font-weight: 400;
-      font-size: 15px;
+      font-size: var(--font-sm);
       line-height: 27px;
       color: #a6a6a6;
     }
 
     .page-title {
-      font-size: 36px;
+      font-size: var(--font-lg);
       position: relative;
       font-weight: 500;
       color: #fff;
@@ -324,13 +333,13 @@ a {
       width: 200px;
       top: 50%;
       left: 130%;
-      background-color: #1b74e4;
+      background-color: var(--primary-color);
     }
   }
 
   .section-wrapper {
     h2 {
-      font-size: 36px;
+      font-size: var(--font-lg);
       font-weight: 500;
       color: #fff;
     }
@@ -350,7 +359,7 @@ a {
 
       .text {
         .title {
-          font-size: 22px;
+          font-size: var(--font-sm);
         }
       }
     }
@@ -451,5 +460,20 @@ a {
       clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
       display: none;
     }
+  }
+  .about{
+    padding:0;
+  }
+  .about-content{
+    padding: 30px 15px !important;
+    .col-sm-9{
+      margin-top: 25px;
+    }
+  }
+  .personal-info{
+    width: 330px !important;
+  }
+  .page-title::before{
+    width: 100px !important;
   }
 }
