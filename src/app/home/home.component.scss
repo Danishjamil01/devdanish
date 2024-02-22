@@ -159,16 +159,16 @@ p {
   color: #fff;
 }
 
-.main button {
+.section-btn {
   background-color: transparent;
   border: 2px solid var(--primary-color);
-  padding: 6px 25px;
+  padding: 6px 40px;
   font-size: var(--font-sm);
   border-radius: 0 27px 0 27px;
   cursor: pointer;
   transition: .5s;
 }
-.main button:hover{
+.section-btn:hover{
   background-color: var(--primary-color);
   border-radius: 25px;
   transition: .5s;
